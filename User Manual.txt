@@ -1,0 +1,14 @@
+STEPS TO RUN THE PROJECT:
+
+1. Build The "Term Project" folder using the following ant script:
+ant deploy -Dwar.name=drpatients
+
+2.Run the following curl commands in a curl prompt to run the project
+
+curl --request GET http://localhost:8080/drpatients/resourcesDr/plain
+curl --request GET http://localhost:8080/drpatients/resourcesDr/xml
+curl --request GET http://localhost:8080/drpatients/resourcesDr/json
+curl --request GET http://localhost:8080/drpatients/resourcesDr/xml/2
+curl --request POST --data "name=Dr Name&patients=PT1,PT2,PT3" http://localhost:8080/drpatients/resourcesDr/create
+curl --request DELETE http://localhost:8080/drpatients/resourcesDr/delete/2
+curl --request PUT --data "id=2&name=Dr Name" http://localhost:8080/drpatients/resourcesDr/update
